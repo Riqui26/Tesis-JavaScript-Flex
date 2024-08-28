@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const destacadosContainer = document.querySelector('#destacados .card-container');
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    // Mostrar el modal del carrito
+    // Mostrar carrito
     document.getElementById('mostrar-carrito').onclick = () => {
         if (carrito.length === 0) {
             Swal.fire({
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Cerrar el modal del carrito
+    // Cerrar carrito
     document.getElementById('cerrar-carrito').onclick = () => {
         carritoModal.style.display = 'none';
     };
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Fetch de la API para obtener cócteles
+    // Fetch de la API
     fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail')
         .then(response => response.json())
         .then(data => {
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     function mostrarDestacados(drinks) {
-        // Seleccionar 3 productos aleatorios
         const destacados = [];
         while (destacados.length < 3 && drinks.length > 0) {
             const randomIndex = Math.floor(Math.random() * drinks.length);
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function mostrarProductos(drinks) {
-        // Mostrar todos los productos restantes
+        // Mostrar todos los productos
         drinks.forEach(drink => {
             const card = document.createElement('div');
             card.classList.add('card');
@@ -151,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 timer: 1500
             });
         } else {
-            // Mostrar mensaje de confirmación de compra usando SweetAlert2
             Swal.fire({
                 icon: 'success',
                 title: 'Compra realizada',
