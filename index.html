@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRINDIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-7890</span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    <i class="fa-solid fa-martini-glass"></i>
+                    <h1 class="logo"><a href="index.html">BRINDIS</a></h1>
+                </div>
+
+                <div>
+                    <button id="mostrar-carrito" class="carrito-icono">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span id="cantidad-carrito">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Destacados</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Más</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." id="user-inp" value="margarita"/>
+                    <button class="btn-search" id="search-btn">
+                        <i class="fa-solid fa-magnifying-glass "></i>
+                    </button>
+                    <div id="result"></div>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <p>Cocteles</p>
+            <h2>LOS MEJORES<br />TRAGOS DEL PAiS</h2>
+        </div>
+    </section>
+
+    <!-- Destacados -->
+    <main class="main-content">
+        <section class="container top-products" id="productos">
+            <h1 class="heading-1">Listado de Cócteles</h1>
+            <div id="lista-productos" class="card-container"></div>
+            <!-- Carrito Modal -->
+            <div id="carrito-modal" class="modal">
+                <div class="modal-content">
+                    <span id="cerrar-carrito" class="close">&times;</span>
+                    <h2>Carrito de Compras</h2>
+                    <ul id="lista-carrito"></ul>
+                    <p>Total: $<span id="total-carrito">0.00</span></p>
+                    <button id="vaciar-carrito">Vaciar Carrito</button>
+                    <button id="comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>
+                            Dirección: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li>Teléfono: 123-456-7890</li>
+                        <li>EmaiL: brindis@gmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+                        <span class="youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </span>
+                        <span class="pinterest">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Información Delivery</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+
+                <div class="my-account">
+                    <p class="title-footer">Mi cuenta</p>
+
+                    <ul>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Historial de ordenes</a></li>
+                        <li><a href="#">Lista de deseos</a></li>
+                        <li><a href="#">Boletín</a></li>
+                        <li><a href="#">Reembolsos</a></li>
+                    </ul>
+                </div>
+
+                <div class="newsletter">
+                    <p class="title-footer">Boletín informativo</p>
+
+                    <div class="content">
+                        <p>
+                            Suscríbete a nuestros boletines ahora y mantente al
+                            día con nuevas colecciones y ofertas exclusivas.
+                        </p>
+                        <input type="email" placeholder="Ingresa el correo aquí...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>
+                    Todos los derechos reservados &copy; 2024
+                </p>
+
+                <img src="payment.png" alt="Pagos">
+            </div>
+        </div>
+    </footer>
+
+    <!-- SweetAlert2 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
